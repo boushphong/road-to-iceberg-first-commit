@@ -23,7 +23,7 @@ object IcebergSparkJob extends App {
 
   spark.sql("DROP TABLE IF EXISTS warehouse.dataset")
 
-  spark.sql("CREATE DATABASE IF NOT EXISTS dataset")
+  spark.sql("CREATE DATABASE IF NOT EXISTS warehouse")
 
   private val df = spark.read.parquet("./data/")
 

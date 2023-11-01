@@ -21,13 +21,19 @@ object IcebergSparkJob extends App {
   // Create a SparkSession using the SparkConf
   private val spark = SparkSession.builder.config(sparkConf).getOrCreate()
 
+  spark.sql("CREATE DATABASE IF NOT EXISTS warehouse")
+
   spark.sql("DROP TABLE IF EXISTS warehouse.dataset")
 
-  spark.sql("CREATE DATABASE IF NOT EXISTS dataset")
+  spark.sql("USE warehouse")
 
   private val df = spark.read.parquet("./data/")
 
   df.show(10,truncate = false)
 
-  df.write.saveAsTable("warehouse.dataset")
+  df.write.saveAsTable("dataset")
+
+  spark.sql("show databases").show()
+
+  spark.sql("show tables").show()
 }

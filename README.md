@@ -7,6 +7,9 @@ curl -o data/yellow_tripdata_2021-04.parquet https://d37ci6vzurychx.cloudfront.n
 
 2. Run the source code
 
+**For interactive notebook:**
+- Install `coursier` from https://get-coursier.io/docs/cli-installation
+- Run `install_scala_jupyter_kernel.sh`
 
 ## The Idea of Iceberg
 > Iceberg is a high-performance format for huge analytic tables.

@@ -5,6 +5,8 @@ object IcebergSparkJob extends App {
   private val sparkConf = new SparkConf()
     .setAppName("Iceberg Spark Job")
     .setMaster("local")
+    .set("spark.sql.defaultCatalog", "iceberg_catalog")
+    .set("spark.sql.catalogImplementation", "in-memory")
     .set("spark.sql.extensions", "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions")
     .set("spark.sql.catalog.iceberg_catalog", "org.apache.iceberg.spark.SparkCatalog")
     .set("spark.sql.catalog.iceberg_catalog.catalog-impl", "org.apache.iceberg.jdbc.JdbcCatalog")
@@ -16,8 +18,6 @@ object IcebergSparkJob extends App {
     .set("spark.sql.catalog.iceberg_catalog.io-impl", "org.apache.iceberg.aws.s3.S3FileIO")
     .set("spark.sql.catalog.iceberg_catalog.warehouse", "s3://warehouse/")
     .set("spark.sql.catalog.iceberg_catalog.s3.endpoint", "http://127.0.0.1:9000")
-    .set("spark.sql.defaultCatalog", "iceberg_catalog")
-    .set("spark.sql.catalogImplementation", "in-memory")
 
   private val spark = SparkSession.builder.config(sparkConf).getOrCreate()
 

@@ -9,7 +9,6 @@ lazy val root = (project in file("."))
 
 val sparkVersion = "3.4.0"
 val icebergVersion = "1.4.1"
-val log4jVersion = "2.20.0"
 val jacksonVersion = "2.14.3"
 
 
@@ -21,8 +20,6 @@ libraryDependencies ++= Seq(
   "org.apache.iceberg" %% "iceberg-spark-runtime-3.4" % icebergVersion,
   "org.apache.iceberg" % "iceberg-aws" % icebergVersion,
   "org.apache.iceberg" % "iceberg-aws-bundle" % icebergVersion,
-  "org.apache.logging.log4j" % "log4j-core" % log4jVersion,
-  "org.apache.logging.log4j" % "log4j-api" % log4jVersion,
   "org.postgresql" % "postgresql" % "42.5.4",
 )
 

@@ -7,7 +7,7 @@ lazy val root = (project in file("."))
     name := "road-to-iceberg-first-commit"
   )
 
-val sparkVersion = "3.4.0"
+val sparkVersion = "3.4.1"
 val icebergVersion = "1.4.1"
 val jacksonVersion = "2.14.3"
 

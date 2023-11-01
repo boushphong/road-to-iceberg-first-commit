@@ -106,8 +106,7 @@ metastore/
 metastore_db/
 sql/hive-thriftserver/test_warehouses
 warehouse/
-spark-warehouse/*
-!spark-warehouse/.gitkeep
+spark-warehouse/
 
 # For R session data
 .RData

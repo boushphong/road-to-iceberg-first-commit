@@ -7,6 +7,9 @@ import java.util.Properties
 import scala.collection.JavaConverters._
 
 class SparkSessionBuilder(val properties_path: String) {
+  System.setProperty("aws.accessKeyId", "admin")
+  System.setProperty("aws.secretAccessKey", "password")
+
   def build(): SparkSession = {
     val properties = new Properties()
     properties.load(getClass.getResourceAsStream(properties_path))

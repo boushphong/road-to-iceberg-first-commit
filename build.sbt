@@ -7,17 +7,17 @@ lazy val root = (project in file("."))
     name := "road-to-iceberg-first-commit"
   )
 
-val sparkVersion = "3.4.1"
-val icebergVersion = "1.4.1"
-val jacksonVersion = "2.14.3"
+val sparkVersion = "3.5.0"
+val icebergVersion = "1.4.2"
+val jacksonVersion = "2.15.1"
 
 
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   "org.apache.iceberg" % "iceberg-core" % icebergVersion,
-  "org.apache.iceberg" %% "iceberg-spark-3.4" % icebergVersion,
-  "org.apache.iceberg" %% "iceberg-spark-runtime-3.4" % icebergVersion,
+  "org.apache.iceberg" %% "iceberg-spark-3.5" % icebergVersion,
+  "org.apache.iceberg" %% "iceberg-spark-runtime-3.5" % icebergVersion,
   "org.apache.iceberg" % "iceberg-aws" % icebergVersion,
   "org.apache.iceberg" % "iceberg-aws-bundle" % icebergVersion,
   "org.postgresql" % "postgresql" % "42.5.4",

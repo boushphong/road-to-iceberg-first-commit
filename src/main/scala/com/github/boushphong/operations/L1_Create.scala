@@ -1,4 +1,4 @@
-package com.github.boushphong.C1_LifeCycle
+package com.github.boushphong.operations
 
 import com.github.boushphong.SparkSessionBuilder
 

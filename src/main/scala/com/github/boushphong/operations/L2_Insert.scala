@@ -1,4 +1,4 @@
-package com.github.boushphong.C1_LifeCycle
+package com.github.boushphong.operations
 
 import com.github.boushphong.SparkSessionBuilder
 
@@ -12,4 +12,6 @@ object L2_Insert extends App {
       |(2, 'Leo', 29, CAST('2023-03-01T01:10:23' AS TIMESTAMP));
       |""".stripMargin
   )
+
+  spark.sql("SELECT * FROM people").show(false)
 }

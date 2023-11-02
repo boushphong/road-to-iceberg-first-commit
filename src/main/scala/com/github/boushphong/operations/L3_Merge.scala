@@ -1,4 +1,4 @@
-package com.github.boushphong.C1_LifeCycle
+package com.github.boushphong.operations
 
 import com.github.boushphong.SparkSessionBuilder
 
@@ -11,6 +11,7 @@ object L3_Merge extends App {
   val data = Seq(
     (2, "Leo", 29, Timestamp.valueOf("2023-03-03 09:09:23")),
     (3, "Deli", 30, Timestamp.valueOf("2023-03-10 20:11:00")),
+    (4, "Dora", 31, Timestamp.valueOf("2023-03-11 11:12:30")),
   )
 
   val df = data.toDF("id", "name", "age", "registered_at")
@@ -27,4 +28,6 @@ object L3_Merge extends App {
       |WHEN NOT MATCHED THEN INSERT *
       |""".stripMargin
   )
+
+  spark.sql("SELECT * FROM people").show(false)
 }

@@ -14,7 +14,7 @@ object L3_Merge extends App {
     (4, "Dora", 31, Timestamp.valueOf("2023-03-11 11:12:30")),
   )
 
-  val df = data.toDF("id", "name", "age", "registered_at")
+  private val df = data.toDF("id", "name", "age", "registered_at")
   df.printSchema()
 
   df.createOrReplaceTempView("tmp_people")

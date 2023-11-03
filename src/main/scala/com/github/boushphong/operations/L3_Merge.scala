@@ -5,7 +5,7 @@ import com.github.boushphong.SparkSessionBuilder
 import java.sql.Timestamp
 
 object L3_Merge extends App {
-  val spark = new SparkSessionBuilder("/jdbc_catalog.properties").build();
+  val spark = new SparkSessionBuilder("/jdbc_catalog.properties").build()
 
   import spark.implicits._
   val data = Seq(

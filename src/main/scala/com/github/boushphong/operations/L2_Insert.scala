@@ -3,7 +3,7 @@ package com.github.boushphong.operations
 import com.github.boushphong.SparkSessionBuilder
 
 object L2_Insert extends App {
-  val spark = new SparkSessionBuilder("/jdbc_catalog.properties").build();
+  val spark = new SparkSessionBuilder("/jdbc_catalog.properties").build()
 
   spark.sql(
     """

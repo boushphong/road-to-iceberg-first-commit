@@ -3,7 +3,7 @@ package com.github.boushphong.operations
 import com.github.boushphong.SparkSessionBuilder
 
 object L1_Create extends App {
-  val spark = new SparkSessionBuilder("/jdbc_catalog.properties").build();
+  val spark = new SparkSessionBuilder("/jdbc_catalog.properties").build()
 
   spark.sql(
     """
@@ -13,7 +13,7 @@ object L1_Create extends App {
       |   age INT,
       |   registered_at TIMESTAMP
       |)
-      |USING iceberg
+      |USING iceberggi
       |PARTITIONED BY (DAY(registered_at));
       |""".stripMargin
   )

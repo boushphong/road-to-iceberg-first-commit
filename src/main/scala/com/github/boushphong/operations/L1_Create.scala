@@ -13,7 +13,7 @@ object L1_Create extends App {
       |   age INT,
       |   registered_at TIMESTAMP
       |)
-      |USING iceberggi
+      |USING iceberg
       |PARTITIONED BY (DAY(registered_at));
       |""".stripMargin
   )

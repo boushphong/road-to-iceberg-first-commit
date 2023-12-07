@@ -9,6 +9,7 @@ import scala.collection.JavaConverters._
 class SparkSessionBuilder(val properties_path: String) {
   System.setProperty("aws.accessKeyId", "admin")
   System.setProperty("aws.secretAccessKey", "password")
+  System.setProperty("aws.region", "us-east-1")
 
   def build(): SparkSession = {
     val properties = new Properties()
